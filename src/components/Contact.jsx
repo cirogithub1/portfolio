@@ -10,7 +10,7 @@ const Contact = () => {
   const [formErrors, setFormErrors] = useState({})
   const [isSubmit, setIsSubmit] = useState(false)
 
-  const form = useRef()
+  const form = useRef(null)
 
   let logUseEffect = true
   useEffect(() => {
