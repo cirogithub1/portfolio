@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=hGAaWhxUPfY
+
+02:44:12
+  mark
+
+useEffect(() => {
+  const listener = () => console.log("Hello world")
+  document.addEventListener('click', listener)
+  }
+  return () => {
+    document.removeEventListener('click', listener)
+  }
+}, [])
+
+const App = () => {
+  let shouldlLog = true
+  useEffect(() => {
+    if(shouldlLog) 
+    shouldlLog = false
+    console.log('Hello world')
+  }, [])
+  return (
+    <div>
+      <span>Hello world<span>
+    <div>
+  )
+)
+
+constact setup emailjs
+https://www.youtube.com/watch?v=bMq2riFCF90
+
+validate form values
+https://www.youtube.com/watch?v=EYpdEYK25Dc
+14:56
+  Mark

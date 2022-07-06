@@ -1,0 +1,87 @@
+button.btn.contact.pointer {
+  margin: 20px 0px;
+}
+button.btn.contact.pointer:hover {
+	background: #fff;
+	color: #f9004d !important;
+}
+.contact {
+  background-color: #191919;
+}
+h1.hire__text {
+  font-size: 60px;
+}
+img.contact__img {
+  margin: 10px 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+input.contact {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  height: 50px;
+  line-height: 46px;
+  margin: 20px 0px;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: .1px;
+  background: none;
+}
+p.error__message {
+  color: #f90000;
+  font-size: 15px;
+  transform: translateY(-12px);
+}
+p.hire__text {
+  font-size: 18px;
+  line-height: 30px;
+  color: rgb(29,29,36,.75);
+  font-weight: 400;
+}
+span.message__submit {
+  border: 2px solid rgb(243, 240, 240);
+  border-radius: 5px;
+  display: flex;
+  padding: 2px 2px;
+  transition: display 2s ease-in-out;
+}
+.submit__btn {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+textarea#message {
+  height: 120px;
+  background: none;
+  padding: 0px 20px;
+  width: 100%;
+  line-height: 46px;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: .1px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin: 20px 0px;
+  margin-bottom: 10px;
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 1024px) {
+	img.contact__img {
+		width: 75%;
+	}
+}
+@media only screen and (max-width: 425px) {
+	img.contact__img {
+    width: 50%;
+	}
+}

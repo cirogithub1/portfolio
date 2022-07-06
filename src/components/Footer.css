@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+.footer__img {
+	margin-left: 36px;
+	width: 180px;
+  height: 120px;
+  object-fit: contain;
+  z-index: 500;
+  background-color: #000;
+  padding: 10px 20px;
+}
+.copyright {
+  color: #c6c9d8;
+  font-size: 14px;
+  opacity: .75;
+}
