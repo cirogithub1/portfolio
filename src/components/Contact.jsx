@@ -78,7 +78,7 @@ const Contact = () => {
     });
 
   }
-
+  
   return (
     <div className='contact component__space' id='Contact'>
       <div className="row">
@@ -137,7 +137,13 @@ const Contact = () => {
               </div>
               <p className="error__message">{formErrors.message}</p>
               <div className='submit__btn'>
-                {(Object.keys(formErrors).length === 0 && isSubmit) ? (<div><span className='message__submit'>Message submited</span></div>) : ''}
+                {(Object.keys(formErrors).length === 0 && isSubmit) ? (
+                  <div>
+                    <span className='message__submit'>
+                      Message submited
+                    </span>
+                  </div>) : ''
+                }
                 <button
                   className="btn contact pointer" type='submit' onClick={handleSubmit}>
                   Submit
