@@ -4,38 +4,43 @@ import contactImg from '../assets/img/front-photo-2.jpg'
 import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
+const initialValues = { from_name: '', from_mail: '', subject: '', message: '' }
+
 const Contact = () => {
-  const initialValues = { from_name: '', from_mail: '', subject: '', message: '' }
   const [formValues, setFormValues] = useState(initialValues)
   const [formErrors, setFormErrors] = useState({})
   const [isSubmit, setIsSubmit] = useState(false)
 
   const form = useRef(null)
 
-  let logUseEffect = true
   useEffect(() => {
-    if (logUseEffect) {
-      // console.log('formErrors :', formErrors)
-      if (Object.keys(formErrors).length === 0 && isSubmit) {
-        sendEmail()
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      sendEmail()
 
-        setFormValues(initialValues)
-        setIsSubmit(false)    
-      }
+      showSpanSubmited(true)
+
+      setFormValues(initialValues)
+      setIsSubmit(false)
+
+      setTimeout(() => {
+        showSpanSubmited(false)
+      }, 3000);
+
+
     }
-    logUseEffect = false
-  }, [formErrors])
+  }, [formErrors, isSubmit])
+
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormValues({ ...formValues, [name]: value })
-    console.log('form :', formValues);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     setFormErrors(validate(formValues))
+
     setIsSubmit(true)
   }
 
@@ -63,22 +68,26 @@ const Contact = () => {
   }
 
   const sendEmail = () => {
-    console.log('====================================');
-    console.log(form.current);
-    console.log('====================================');
     emailjs.sendForm(
       'service_hfhi88u',
       'template_3zpft0b',
       form.current,
       'uBcgHjJLSC1CPZdrp')
     .then((result) => {
-        console.log('result.text', result.text);
+        console.log('result.text :', result.text);
     }, (error) => {
-        console.log('result.text', error.text);
+        console.log('result.text :', error.text);
     });
-
   }
-  
+
+  const showSpanSubmited = (show) => {
+    if (show) {
+      document.querySelector('.message__submit').classList.add('active')
+    } else {
+      document.querySelector('.message__submit').classList.remove('active')
+    }
+  }
+
   return (
     <div className='contact component__space' id='Contact'>
       <div className="row">
@@ -137,13 +146,11 @@ const Contact = () => {
               </div>
               <p className="error__message">{formErrors.message}</p>
               <div className='submit__btn'>
-                {(Object.keys(formErrors).length === 0 && isSubmit) ? (
-                  <div>
-                    <span className='message__submit'>
-                      Message submited
-                    </span>
-                  </div>) : ''
-                }
+                <div>
+                  <span className='message__submit'>
+                    Message submited
+                  </span>
+                </div>
                 <button
                   className="btn contact pointer" type='submit' onClick={handleSubmit}>
                   Submit
