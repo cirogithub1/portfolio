@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Home.css";
-import logo from "../assets/img/logo-5.png";
+import logo from "../assets/img/french-flag.gif";
 import { useEffect } from 'react'
 import { BsJustify } from 'react-icons/bs'
 
@@ -76,9 +76,9 @@ const Home = () => {
 				<div className="container">
 					<div className="home__content">
 						<div className="home__meta">
-							<h1 className="home__text pz__10">TOTAL INMERSION COURSES</h1>
-							<h2 className="home__text pz__10">Hi, I'm Suzanne B.</h2>
-							<h3 className="home__text sweet pz__10">Language Teacher</h3>
+							<h1 className="home__text pz__10">Hi, I'm Suzanne B.</h1>
+							<h2 className="home__text pz__10">Language Teacher</h2>
+							<h3 className="home__text sweet pz__10">Total Inmersion Curses</h3>
 						</div>
 					</div>
 				</div>

@@ -1,20 +1,23 @@
 h1.home__text {
-	font-size: 18px;
-	font-weight: 600;
-	letter-spacing: 2px;
+	font-size: 50px;
+	line-height: 45px;
+	font-weight: 800;
+	letter-spacing: 1px;
 	font-family: "Monserrat", sans-serif;
 	color: rgb(42, 28, 170, 0.8) !important;
 }
 h2.home__text {
-	font-size: 53px;
-	line-height: 53px;
+	font-size: 40px;
+	line-height: 45px;
 	font-weight: 800;
+	letter-spacing: 1px;
 	font-family: "Monserrat", sans-serif;
 }
 h3.home__text {
-	font-size: 51px;
-	line-height: 41px;
-	font-weight: 800;
+	font-size: 30px;
+	line-height: 45px;
+	font-weight: 1000;
+	letter-spacing: 1px;
 	font-family: "Monserrat", sans-serif;
 }
 .header.active {
@@ -58,10 +61,12 @@ li.side__nav__bar {
 	padding: 25px 25px;
 }
 .logo img {
-	margin-left: 36px;
+	margin-left: 50px;
 	width: 180px;
 	height: 120px;
 	object-fit: contain;
+	transform: rotate(0deg);
+	filter: brightness(1.25);
 }
 .toggle__nav__menu {
 	display: none;
